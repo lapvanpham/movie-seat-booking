@@ -1,6 +1,19 @@
+:root {
+  --color-selected: #6feaf6;
+  --color-accent: #6feaf6;
+  --color-occupied: white;
+  --color-available: #444451;
+}
+
+.accent-text {
+  color: var(--color-accent);
+}
+
 *,*::after,*::before {
   box-sizing: border-box;
 }
+
+
 
 body {
   background-color: #242333;
@@ -19,6 +32,7 @@ body {
 }
 
 .movie-container select {
+  outline: none;
   background-color: #fff;
   bottom: 0;
   border-radius: 5px;
@@ -28,5 +42,69 @@ body {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
+}
 
+.showcase {
+  color: #777777;
+  display: flex;
+  list-style-type: none;
+  background-color: rgba(0,0,0,0.1);
+  justify-content: space-around;
+  padding: 0;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.showcase li small {
+  margin-top: 2px;
+}
+
+.seat {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 15px;
+  height: 12px;
+  background-color: #c97979;
+  margin: 3px;
+}
+
+.occupied {
+  background-color: var(--color-occupied);
+} 
+.available {
+  background-color: var(--color-available);
+} 
+.selected {
+  background-color: var(--color-selected);
+}   
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.row div:nth-child(2) {
+  margin-right: 18px;
+}
+.row div:nth-child(7) {
+  margin-left: 18px;
+}
+
+
+.screen {
+  width: 100%;
+  height: 70px;
+  transform: rotateX(-45deg);
+  background-color: #fff;
+  box-shadow: white ;
 }
